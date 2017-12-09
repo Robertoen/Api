@@ -15,8 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-/*Route::get('/4linux', function () {
-    return view('4linux',['blade' => 'OLA']);
-});*/
-
 Route::get('linux', 'linuxController@index');
+
+Route::get('aluno', 'AlunoController@index');
+Route::get('aluno/{id}', 'AlunoController@find');
+Route::post('aluno', 'AlunoController@insert');
+Route::put('aluno/{id}', 'AlunoController@update');
+Route::delete('aluno', 'AlunoController@delete');
+
